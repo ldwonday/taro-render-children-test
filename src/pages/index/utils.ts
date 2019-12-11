@@ -1,7 +1,5 @@
-import { DateSelectText, EDateSelect } from './constants';
+import { EDateSelect } from './constants';
 import moment from 'moment';
-import { usePageScroll, useRef } from '@tarojs/taro';
-import Table from './components/Table';
 
 export const getDate = (time: EDateSelect) => {
   const endTime = moment(new Date())
@@ -56,18 +54,6 @@ export const getYesterday = () => {
       .endOf('day'),
   ];
 };
-
-export const useScrollTable = () => {
-  const sortTableComponent = useRef();
-  usePageScroll(e => {
-    if (sortTableComponent.current) {
-      const tableRef: Table = sortTableComponent.current.tableRef.current;
-      tableRef && tableRef.onPageScroll(e);
-    }
-  });
-  return sortTableComponent;
-};
-
 export const getCurrentDateTypeByRange = (range: moment.Moment[] | undefined) => {
   return (
     range &&

@@ -35,6 +35,4 @@ export type IDuration = IOverSum[];
 export interface ISearchParams {
   dateRange: moment.Moment[];
   robotNo: string | number;
-  sort: SortName;
-  sortBy: string;
 }

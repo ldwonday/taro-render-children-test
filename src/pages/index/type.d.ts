@@ -1,10 +1,4 @@
 import moment from 'moment';
-import { ColumnType } from './constants';
-import {CSSProperties} from "react";
-
-export interface DevicesListParams extends TableListPagination {
-  status: number;
-}
 
 export interface DeviceListItem {
   createTime: string;
@@ -24,7 +18,7 @@ export interface DeviceListItem {
 }
 
 export interface SearchHeaderParam {
-  robotNo: PopSelectListItem['id'];
+  robotNo: string | number;
   dateRange?: moment.Moment[];
 }
 
@@ -37,13 +31,3 @@ export interface ChartDataItem {
     data: number[];
   }[];
 }
-
-export interface TableListColumn<T> {
-  title: string;
-  dataIndex: string;
-  span?: number;
-  style?: CSSProperties;
-  type?: ColumnType;
-}
-
-type SortName = 'asc' | 'desc';
