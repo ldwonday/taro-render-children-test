@@ -1,0 +1,33 @@
+.searchHeader{
+  padding: 48px 40px 0;
+  .selectDevice{
+    .title{
+      font-size: 36px;
+      color:rgba(57,69,78,1);
+      font-weight: 500;
+    }
+  }
+  .selectDate{
+    margin: 48px 0 24px 0;
+    display: flex;
+    align-items: center;
+    .timeItem{
+      background: #fff;
+      border-radius: 4px;
+      font-size: 28px;
+      text-align: center;
+      color:rgba(53,53,53, .6);
+      margin-right: 16px;
+      padding: 8px 24px;
+      transition: all 0.3s;
+      &.active{
+        color: #fff;
+        background: rgba(72,191,107, 1);
+      }
+    }
+  }
+  .divider{
+    margin-top: 32px;
+    border-bottom: 1px solid #E9E9E9;
+  }
+}
